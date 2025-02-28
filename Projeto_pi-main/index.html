@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/casa.ico" type="image/x-icon">
+    <i class="fa-solid fa-house"></i> <!-- Ícone de casa -->
+    <title>Nome do jogo - PI/SENAC</title>
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="banner">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a class="menu" href="index.html">Inicio</a></li>
+                    <li><a class="menu" href="Sobre.html">Sobre</a></li>
+                    <li><a class="menu" href="Desenvolvimento.html">Desenvolvimento</a></li>
+                    <li><a class="menu" href="Desenvolvedores.html">Desenvolvedores</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção de Boas-Vindas -->
+    <section class="hero">
+        <div class="container">
+            <div class="carousel">
+                <div class="carousel-images">
+                    <img src="img/desenvolvimento 1.png" alt="Imagem 1">
+                    <img src="img/desenvolvimento 2.png" alt="Imagem 2">
+                    <img src="img/desenvolvimento 3.png" alt="Imagem 3">
+                </div>
+            </div>
+        <h2>Projeto Integrador - Jogo 2D: O Livro Perdido</h2>
+        <p>
+            Este projeto visa o desenvolvimento de um jogo 2D ambientado na biblioteca do SENAC, onde o personagem principal encontra um livro antigo e é transportado para um universo paralelo. <br> O jogo terá classes jogáveis como Bárbaro, Bardo, Mago e Druida, cada uma com habilidades específicas para resolver puzzles.
+            O objetivo é criar uma experiência imersiva, combinando narrativa envolvente e mecânicas de jogo desafiadoras. <br>Este trabalho faz parte do Projeto Integrador (PI), com foco na aplicação de conceitos de programação, design e desenvolvimento de jogos 2D.</p>
+       <!-- <a href="#" class="btn">Saiba Mais</a> -->
+        </div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section class="features">
+        <div class="container">
+            <h2>Inicio do Desenvolvimento</h2>
+            <div class="feature-item">
+                <h3>Começo de Tudo</h3>
+                <p>Um design limpo e responsivo para todos os dispositivos.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Como foi o Desenvolvimento</h3>
+                <p>Interface intuitiva e fácil de navegar.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Parte Final do Projeto</h3>
+                <p>Adapte o site às suas necessidades.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Projeto PI. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script>
+        let indice = 0;
+
+        function mudarSlide(direcao) {
+            const slides = document.querySelector(".carousel-images");
+            const totalSlides = document.querySelectorAll(".carousel img").length;
+
+            indice += direcao;
+            if (indice >= totalSlides) indice = 0;
+            if (indice < 0) indice = totalSlides - 1;
+
+            slides.style.transform = `translateX(${-indice * 100}%)`;
+        }
+
+        setInterval(() => mudarSlide(1), );
+    </script>
+</body>
+</html>
